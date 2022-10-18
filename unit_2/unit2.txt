@@ -1,0 +1,53 @@
+Unit 2
+
+Lesson 8: Setting up Express.js
+
+1. What is the lesson about: setting up an app with Express.js
+
+2. Why do we need a framework: 
+- Giving structure to our data
+- Displaying data
+- Handling requests to interact with that data
+
+3.What do you need to do to install Express.js:
+
+4. Explain the listing for 8.1 & 8.2/ figure 8.1 (explain what the code means)
+
+5.What code can you show for lesson 8 & run your code/show a demo
+
+Lesson 9: Routing in Express.js- how
+routes can be rewritten to use controllers in your application
+
+This lesson covers
+ Setting up routes for your application
+ Responding with data from another module
+ Collecting request URL parameters
+ Moving route callbacks to controllers
+
+1. Explain listing 9.1/9.2/9.3/9.4/9.5
+Listing 9.5 can be demonstrated
+2. what is the role of middleware fucntions in figure 9.1
+
+Lesson 10: Connecting views with templates ( How does the controller communicate with the view
+
+This lesson covers
+Using HTML with EJS
+ Connecting a templating engine to your application
+ Passing data from your controllers to your views
+ Setting up Express.js layouts
+
+1. Read the 1st and last paragraphs
+2. Discuss all listings & figures
+3. Demo code
+
+Lesson 11
+
+This lesson covers
+ Changing your application start script
+ Serving static pages with Express.js
+ Creating middleware functions for error handling
+
+Lesson 12
+
+Summarize everything and demo code
+

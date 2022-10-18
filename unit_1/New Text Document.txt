@@ -1,0 +1,30 @@
+LESSON 3
+
+**firstly install on your terminal**
+Go to the folder where there's a main.js
+
+use: npm install
+then: run "node main"  
+
+LESSON 4
+
+*Expand the code of listing 4.1 while demonstrating the running server.
+
+LESSON 5
+
+*Demonstrate a POST request with a curl command
+*Demonstrate a web server with routes
+
+Lesson 6
+ 
+*Explain all the listing referring to your own code
+*while running the application
+
+LESSON 7
+
+*Explain all the listing referring to your own code
+*while running the application
+*After running the application, show how to view course and subscribe
+
+**PUSH ALL THE CODE TO GITHUB 
+*Remember not to push node_modules folder( using .gitignore file)

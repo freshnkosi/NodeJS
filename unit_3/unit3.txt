@@ -1,0 +1,99 @@
+
+--------------------------------------------------------------------------------------------------------
+CHAPTER 13
+
+
+This lesson covers the following:
+
+ Installing MongoDB
+ Reading and entering data within the MongoDB shell
+ Connecting MongoDB to a Node.js application
+
+1. INSTALLING MONGODB
+====================
+ Go to https://www.mongodb.com/download-center#community in your browser.
+ Download MongoDB for Windows (.msi).
+ When the download is complete, open the file, and click through the default
+installation steps.
+ When the installer completes, go to your C:\ drive, and create a new folder called
+data and a folder within it called db.
+
+1.1 Figure 13.1
+===============
+Discuss figure 13.1 and a look at relational databases
+
+2.READING DATA ON MONGODB SHELL
+===============================
+
+2.1 Figure 13.2
+===============
+To display your current database use [db]
+to show all your databases use [show dbs] 
+To create a new database use [use name]
+To use the database you created use [name_db]
+
+2.2 Listing 13.3
+================
+How to add data to a new collection in terminal
+use name(name of database).name(name of the document/collection).insert({ . . . }) This allows you to Insert new data into the
+database. 
+--eg. db.contacts.insert({
+--name: "Jon Wexler",
+--email: "jon@jonwexler.com",
+--note: "Decent guy."
+--})
+
+2.3 Listing 13.4
+================
+How to find all data response in terminal
+use name(name of database).name(name of the document/collection).find()
+You can also use keep your data organized and unique, MongoDB uses an ObjectId class to record
+some meaningful information about its database documents
+--eg. db.contacts.find({_id: ObjectId("5941fce5cda203f026856a5d")})
+To find out more about Mongodb Shell visit https://www.mongodb.com/docs/v4.2/reference/method/
+
+2.4 Figure 13.3
+===============
+Download the software from https://www.mongodb.com/download-center#
+compass.
+Follow the installation steps to add MongoDB Compass to your applications
+folder.
+Run MongoDB Compass and accept the default connection settings to your
+existing MongoDB setup
+To displays all the collections in your database use [show collections]
+
+-----------------------------------------------------------------------------------------------------
+CHAPTER 14
+
+ Installing and connecting Mongoose to your Node.js application
+ Creating a schema
+ Building and instantiating Mongoose data models
+ Loading and saving data with custom methods
+
+1.1 Installing mongoose 
+=======================
+npm i mongoose -S
+ODM is an object-document mapper, which is the role of Mongoose in your application
+development.
+
+---------------------------------------------------------------------------------------------
+CHAPTER 15
+
+ Connecting controllers to models
+ Saving data through a controller action
+ Implementing database queries with promises
+ Handling posted form data
+
+1.1 connecting controllers to models
+====================================
+Create a folder calles models and in the folder create a file called subscribers.js
+
+-----------------------------------------------------------------------------------------------
+CHAPTER 16 
+
+ A MongoDB database
+ The Mongoose package
+ A data schema with three fields
+ A form for subscribing on the site
+ A route to handle POST requests and save the subscriber data model
+

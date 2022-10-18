@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "cities": "^2.0.0",
+    "http-status-codes": "^2.2.0"
+  }
+}

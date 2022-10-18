@@ -1,0 +1,81 @@
+
+In this unit, I discuss create, read, update,
+and delete (CRUD) functions in application development
+and show what you need to create a robust
+model.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+Lesson 17: Improving data models
+
+This lesson covers
+ Adding validations to your models
+ Creating static and instance methods for your models
+ Testing your models in REPL
+ Implementing data associations on multiple models
+
+17.1
+
+-To start improving your model, add some Mongoose validators.
+-You want to require the name property and make it type String. The email property should
+ be required because no two records can have the same email, and it’s also of type String.
+-Last, the ZIP code property won’t be required, but it has
+ a minimum and maximum number of digits.
+-Because the subscriber’s schema defines how instances of the Subscriber model behave,
+ you can also add instance and static methods to the schema.
+-getInfo can be called on a Subscriber instance to return the subscriber’s information in
+ one line, which could be useful to get a quick read of the subscribers in your database.
+-findLocalSubscribers works the same way but returns an array of subscribers.
+-This instance method involves a Mongoose query where this refers to the instance of Subscriber
+on which the method is called.
+
+17.2
+
+-To start interacting with your database by using the Subscriber model, you need to go
+into REPL by typing the node keyword in a new terminal window and adding the lines:
+
+const mongoose = require("mongoose"),
+Subscriber = require("./models/subscriber");
+mongoose.connect(
+"mongodb://localhost:27017/recipe_db",
+{useNewUrlParser: true}
+);
+mongoose.Promise = global.Promise;
+
+-Try to create new records with different content. Check that your validators for the zip-
+Code property are working by creating a new Subscriber with ZIP code 890876 or 123.
+Then try to delete one or all of your subscriber records directly from REPL.
+Next, I show you how to associate this new model with other new models.
+
+17.3: Creating model associations
+
+-If two models are associated in some way—a user has many pictures, an order has a single
+payment, many classes share multiple enrolled students—you add a property with the associated
+model’s name, where the type is Schema.Types.ObjectId, the ref attribute is set to the
+associated model’s name, and Schema is mongoose.Schema. The following code might represent
+a schema property for users with many pictures: pictures: [{type: Schema.Types
+.ObjectId, ref: "Picture"}].
+
+-Add another model to this recipe application called Course, and associate it with Subscriber.
+This course model represents recipe courses to choose from in the application.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+LESSON 18: 
+
+This lesson covers
+ Creating model associations with a user model
+ Using virtual attributes
+ Implementing a CRUD structure on the user model
+ Building an index page to view all users in your database
+
+-WE'RE BUILDING THE USER MODEL by creating the user.js file in the models folder
+-Specify mongoose to use native promises, and to connect to your database
+-Then require the new user model with const User = require("./models/user").
+-Create a new user instance in REPL, and log the returned user or error to see whether the model was set up correctly.
+
+18.2: Adding CRUD methods to your models
+
+-For the new.ejs and edit.ejs forms, you need to route the form submissions to create and
+update routes, respectively. When you submit a form to create a new user, for example,
+the form data should be posted to the user/create route.
+
+18.3: Building the index page
+
